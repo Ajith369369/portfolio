@@ -1,0 +1,27 @@
+#hero > div {
+  background-color: white;
+  border-radius: 50%;
+  width: fit-content;
+  border: 2px solid black;
+  z-index: 10;
+}
+
+#hero > img {
+  z-index: 5;
+}
+
+#about > div > div.section-title > p {
+  text-align: justify;
+}
+
+#about > div > div.section-title > ul > li {
+  text-align: justify;
+}
+
+#about > div > div.row > div.col-lg-8.pt-4.pt-lg-0.content > p {
+  text-align: justify;
+}
+
+#resume > div > div.section-title > p, #portfolio > div > div.section-title > p, #resume > div > div.row > div:nth-child(1) > div.resume-item.pb-0 > p:nth-child(2), #resume > div > div.row > div:nth-child(2) > div:nth-child(2) > ul > li, #resume > div > div.row > div:nth-child(2) > div:nth-child(3) > ul > li {
+  text-align: justify;
+}
