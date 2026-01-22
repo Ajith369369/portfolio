@@ -162,7 +162,7 @@
                   <ul>
                     <li>
                       <i class="bi bi-rounded-right"></i>
-                      <strong>Birthday:</strong> May 8 1993
+                      <strong>Birthday:</strong> May 8, 1993
                     </li>
                     <!-- <li>
                       <i class="bi bi-rounded-right"></i>
@@ -182,7 +182,7 @@
                   <ul>
                     <li>
                       <i class="bi bi-rounded-right"></i>
-                      <strong>Age:</strong> 31
+                      <strong>Age:</strong> <span id="age">8</span>
                     </li>
                     <li>
                       <i class="bi bi-rounded-right"></i>
@@ -697,5 +697,28 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Calculate Age Dynamically -->
+    <script>
+      (function() {
+        // Birthday: May 8, 1993
+        const birthday = new Date(1993, 4, 8); // Month is 0-indexed (May = 4)
+        const today = new Date();
+        
+        let age = today.getFullYear() - birthday.getFullYear();
+        const monthDiff = today.getMonth() - birthday.getMonth();
+        
+        // Adjust age if birthday hasn't occurred this year
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthday.getDate())) {
+          age--;
+        }
+        
+        // Update the age element
+        const ageElement = document.getElementById('age');
+        if (ageElement) {
+          ageElement.textContent = age;
+        }
+      })();
+    </script>
   </body>
 </html>
